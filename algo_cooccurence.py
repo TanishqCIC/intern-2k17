@@ -6,20 +6,29 @@ concepts = []
 concepts.append("process management in thread")
 concepts.append("management")
 
+#threshold is often defined as e in the paper
+threshold = 2
 
 
-for alpha_index in concepts:
-	leng = len(alpha_index)
-	flag = 0
+
+for alpha_index in concepts[:-1]:
+	leng_c1 = len(alpha_index)
+	leng_c2 = len(alpha_index+1)
+	flag_c1 = 0
+	flag_c2 = 0
 	for beta_index in alpha_index:
 		if beta_index == " ":
-			flag = flag+1
+			flag_c1 = flag_c1+1
+	for gamma_index in alpha_index:
+		if beta_index == " ":
+			flag_c2 = flag_c2+1
 	#call function
 	"""
-	if flag == 1:
-		
+	match(flag)
+
 	"""
-	print(flag)
+	print(flag_c1)
+	print(flag_c2)
 	
 """
 #Enter the name of the .txt file  down here
