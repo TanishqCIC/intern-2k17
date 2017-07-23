@@ -38,6 +38,7 @@ def match(c1, c2, flag_alpha, flag_beta):
 		con_c1.append(c1)
 		print(con_c1)
 
+	
 	if flag_beta != 1:
 		print('beta not onegram')
 		con_c2 = []
@@ -55,5 +56,20 @@ def match(c1, c2, flag_alpha, flag_beta):
 		con_c2 = []
 		con_c2.append(c2)
 		print(con_c2)
-
+	
+	
+	alpha_count = 0
+	for cursor_text in range(0, len(text)):
+		flag_match = 0
+		for cursor_alpha in range(0, len(con_c1)):
+			#print('index_text', cursor_text+cursor_alpha, 'ind_alpha', cursor_alpha)
+			if cursor_alpha+cursor_text<len(text):
+				if text[cursor_text+cursor_alpha] == con_c1[cursor_alpha]:
+					if flag_match != 2:
+						flag_match = 1
+				else:
+					flag_match = 2
+		if flag_match == 1:
+			alpha_count = alpha_count+1
+	print('alpha', alpha_count)
 	
