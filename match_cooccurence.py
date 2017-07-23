@@ -19,3 +19,41 @@ def match(c1, c2, flag_alpha, flag_beta):
 
 	count_c1 = 0
 	count_c2 = 0
+
+	if flag_alpha != 1:
+		print('alpha not onegram')
+		con_c1 = []
+		initial_flag = 0
+		for space_alpha in range(0, len(c1)):
+
+			if c1[space_alpha] == " ":
+				con_c1.append(c1[initial_flag:space_alpha])
+				initial_flag = space_alpha+1
+			if space_alpha == len(c1)-1:
+				con_c1.append(c1[initial_flag:space_alpha+1])
+		print(con_c1)
+	else:
+		print('alpha is onegram')
+		con_c1 = []
+		con_c1.append(c1)
+		print(con_c1)
+
+	if flag_beta != 1:
+		print('beta not onegram')
+		con_c2 = []
+		initial_flag = 0
+		for space_beta in range(0, len(c2)):
+
+			if c2[space_beta] == " ":
+				con_c2.append(c2[initial_flag:space_beta])
+				initial_flag = space_beta+1
+			if space_beta == len(c2)-1:
+				con_c2.append(c2[initial_flag:space_beta+1])
+		print(con_c2)
+	else:
+		print('beta is onegram')
+		con_c2 = []
+		con_c2.append(c2)
+		print(con_c2)
+
+	
