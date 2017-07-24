@@ -112,5 +112,6 @@ for alpha_index in concepts[:-1]:
 	match(flag)
 
 	"""
-	
+	#print(flag_c1)
+	#print(flag_c2)
 	
