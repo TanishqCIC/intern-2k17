@@ -96,4 +96,21 @@ print('www.github.com/TanishqCIC')
 
 
 
+"""
+for alpha_index in concepts[:-1]:
+	leng_c1 = len(alpha_index)
+	leng_c2 = len(alpha_index+1)
+	flag_c1 = 0
+	flag_c2 = 0
+	for beta_index in alpha_index:
+		if beta_index == " ":
+			flag_c1 = flag_c1+1
+	for gamma_index in alpha_index:
+		if beta_index == " ":
+			flag_c2 = flag_c2+1
+	#call function
+	match(flag)
 
+	"""
+	
+	
