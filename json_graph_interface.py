@@ -12,8 +12,7 @@ keys = len(data)
 with open('arr_links.json') as data_file:    
     data_links = json.load(data_file)
 
-print(keys)
-print(data_links)
+
 arr_nodes = {}
 
 links = []
@@ -30,8 +29,7 @@ for key in data_links:
 	arr_link.append(list_link)
 	key_index.append(key)
 
-print(arr_link)
-print(len(arr_link))
+
 for key in data:
 	for node in data[key]:
 		nodes.append(node)
@@ -42,4 +40,13 @@ for key in data:
 			flag = beta;
 
 	gg.graph(data[key], data_links[key][key], index, flag)
-	pprint('done with graph ' + key)
+	
+index = "intersection_graph"
+gg.graph(nodes, all_links, index, 1)
+pprint('done with all graphs :)')
+
+
+print('Author-> TanishqCIC')
+
+
+#pprint(data)
