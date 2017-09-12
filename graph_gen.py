@@ -21,9 +21,9 @@ def graph(nodes, links, index, flag):
 	G.add_nodes_from(arr)
 	G.add_edges_from(links)
 	string = 'nodes: '+str(len(arr))
-	print(string)
+	
 	string = 'edges: '+str(len(links))
-	print(string)
+	
 	if flag == 1:
 		nx.draw(G, node_color='bisque', with_labels=True, node_size=50, font_size=0.4)	
 	else:
