@@ -1,3 +1,5 @@
+#Author -> TanishqCIC
+
 import numpy as np 
 import pandas as pd 
 import matplotlib.pyplot as ml
@@ -26,9 +28,12 @@ def graph(nodes, links, index, flag):
 		nx.draw(G, node_color='bisque', with_labels=True, node_size=50, font_size=0.4)	
 	else:
 		nx.draw(G, node_color='bisque', with_labels=True, node_size=300, font_size=2)
-	#ml.show()
+	
 	plot = index+".png"
 	ml.savefig(plot, dpi=2800)
 	ml.savefig("plot.pdf")
 	ml.clf()
 
+	arr = []
+	links = []
+	G.clear()
